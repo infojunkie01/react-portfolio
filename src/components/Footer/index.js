@@ -5,7 +5,7 @@ function Footer() {
 
 
   return (
-    <header className="flex-row px-1 justify-content-center">
+    <footer className="flex-row px-1 justify-content-center">
       <ul className="flex-row">
         <li className="mx-2">
           <a href="https://github.com/infojunkie01">
@@ -24,7 +24,7 @@ function Footer() {
         </li>
     
       </ul>
-    </header>
+    </footer>
   );
 }
 

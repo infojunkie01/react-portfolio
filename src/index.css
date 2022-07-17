@@ -28,7 +28,7 @@ body {
 
 }
 
-li{
+nav li , footer li{
   list-style: none;
 }
 
