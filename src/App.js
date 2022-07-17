@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
+import Header from './components/Header';
 import Nav from './components/Nav';
-import About from './components/About';
-import Portfolio from './components/Portfolio';
-import Resume from './components/Resume';
-import Contact from './components/Contact';
+import About from './components/pages/About';
+import Portfolio from './components/pages/Portfolio';
+import Resume from './components/pages/Resume';
+import Contact from './components/pages/Contact';
 import Footer from './components/Footer';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
 
   return (
     <div>
+      <Header></Header>
       <Nav
         // categories={categories}
         // setCurrentCategory={setCurrentCategory}
