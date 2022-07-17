@@ -6,6 +6,7 @@ main {
 
 }
 :root {
+
 }
 
 * {
@@ -30,6 +31,29 @@ body {
 
 nav li , footer li{
   list-style: none;
+}
+
+h1 a{
+  color: black;
+}
+
+a:hover{
+  text-decoration: none;
+  color: rgb(132, 71, 255);
+}
+
+nav a, footer a{
+  text-decoration: none;
+  color: rgb(132, 71, 255);
+}
+
+nav a:hover, footer a:hover{
+  text-decoration: none;
+  color: rgb(255, 59, 24);
+}
+
+.active-nav{
+  color: rgb(255, 59, 24);
 }
 
 .container {

@@ -8,33 +8,34 @@ import Contact from './components/pages/Contact';
 import Footer from './components/Footer';
 
 function App() {
-  // const [categories] = useState([
-  //   {
-  //     name: 'commercial',
-  //     description: 'Photos of grocery stores, food trucks, and other commercial projects',
-  //   },
-  //   { name: 'portraits', description: 'Portraits of people in my life' },
-  //   { name: 'food', description: 'Delicious delicacies' },
-  //   { name: 'landscape', description: 'Fields, farmhouses, waterfalls, and the beauty of nature' },
-  // ]); 
 
-  // const [currentCategory, setCurrentCategory] = useState(categories[0]);
+  const [currentPage, setCurrentPage] = useState('About');
+
+  const renderPage = () => {
+    if (currentPage === 'About') {
+      return <About />;
+    }
+    else if (currentPage === 'Portfolio') {
+      return <Portfolio />;
+    }
+    else if (currentPage === 'Resume') {
+      return <Resume />;
+    } else {
+      return <Contact />;
+    }
+
+  }
+
+  const pageChangeHandler = (page) => setCurrentPage(page);
 
   return (
     <div>
-      <Header></Header>
-      <Nav
-        // categories={categories}
-        // setCurrentCategory={setCurrentCategory}
-        // currentCategory={currentCategory}
-      ></Nav>
+      <Header />
+      <Nav currentPage={currentPage} pageChangeHandler={pageChangeHandler} />
       <main>
-        <Portfolio></Portfolio>
-        <About></About>
-        <Resume></Resume>
-        <Contact></Contact>
+        {renderPage()}
       </main>
-      <Footer></Footer>
+      <Footer />
     </div>
   );
 }
