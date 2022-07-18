@@ -4,8 +4,7 @@ import avatar from "../../assets/about/avatar.png";
 function About() {
 
   return (
-    <section className="my-5" >
-
+    <section className="mb-5">
       <h2 id="about" className="d-flex justify-content-center ">About me</h2>
       <div className="d-flex justify-content-center mb-4">
         <img src={avatar} alt="avatar" className="col-1" />
